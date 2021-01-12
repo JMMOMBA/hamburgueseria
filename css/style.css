@@ -26,7 +26,7 @@ body {
     font-family: var(--fuenteprincipal);
     font-size: var(--fontsize);
 }
-/* clase */
+/* clase para encorsetar  */
 .container {
     max-width: var(--anchomaximo);
     margin: 0 auto;
@@ -50,12 +50,69 @@ header .nav-top a span {
 header .nav-top a i {
     font-size: 150%;
 }
+header nav {
+    padding: var(--margingrid);
+}
+header nav .hamburguesa {
+    cursor: pointer;
+}
+header .logo {
+    float: left;
+    max-width: 100px;
+}
+header .hamburguesa {
+    float: right;
+}
+header .menu {
+    padding-top: 60px;
+    text-align: center;
+}
+header .menu a {
+    text-decoration: none;
+    display: block;
+    padding: calc(var(--margingrid)*1.25);
+    color: #aaa;
+    border-bottom: 1px solid #aaa;
+}
+/* quitar ultima linea */
+header .menu li:last-child a {
+    border: 0px;
+}
+header .menu .activo {
+    color: var(--colorprincipal);
+}
+
+/* las tres rayas sean boton */
+header nav .hamburguesa div {
+    border-top: 2px solid #aaa;
+    margin-bottom: calc(var(--margingrid)*0.75);
+    width: 2em;
+}
 /* fin header */
 
 /* mediaquerys al final */
-@media(min-width: 600px) {
+@media(min-width: 768px) {
     header .nav-top a span {
         display: inline;
         color: white;
+    }
+    header .nav-top a i {
+        font-size: 120%;
+    }
+}
+@media(min-width: 1004px) {
+    header .hamburguesa {
+        display: none;
+    }
+    header .menu {
+        padding-top: 0px;
+        text-align: right;
+    }
+    header .menu li {
+        display: inline-block;
+    }
+    header .menu li a {
+        border: 0px;
+        padding: 0.5em calc(var(--margingrid));
     }
 }
