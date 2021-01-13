@@ -7,6 +7,9 @@ font-family: 'Montserrat', sans-serif; */
 }
 html {
     scroll-behavior: smooth;
+    /* para anclar el footer */
+    min-height: 100%;
+    position: relative;
 }
 img {
     width: 100%;
@@ -93,22 +96,40 @@ header nav .hamburguesa div {
 /* Inicio footer */
 
 
-footer .flecha a {
+/* footer .flecha a {
     
     color: var(--colorprincipal);
     font-size: 150%;
-    padding: var(--margingrid) 10px;
+    padding: var(--margingrid) 10px; */
 
 }
 
-footer .pie {
+footer {
     background-color: var(--colorsecundario);
     padding: var(--margingrid) 0px;
-    font-family: var(--fuenteprincipal);
-    font-size: var(--fontsize);
-    display: block;
     color: white;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+         
 }
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer a:hover {
+    color: var(--colorprincipal);
+}
+.flecha a {
+    display: block;
+    color: var(--colorprincipal);
+    position: fixed;
+    bottom: 60px;
+    height: 10px;
+    font-size: 250%;
+}
+
 /* Fin footer */
 
 /* mediaquerys al final */
@@ -137,15 +158,4 @@ footer .pie {
         padding: 0.5em calc(var(--margingrid));
     }
 }
-@media(max-width: 768px) {
-    footer .pie {
-        display: block;
-        text-align: center;
-    }
-}
-@media(min-width: 1004px) {
-    footer .pie {
-        display: block;
-        text-align: left;
-    }
 }
