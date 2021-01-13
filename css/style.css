@@ -95,15 +95,6 @@ header nav .hamburguesa div {
 
 /* Inicio footer */
 
-
-/* footer .flecha a {
-    
-    color: var(--colorprincipal);
-    font-size: 150%;
-    padding: var(--margingrid) 10px;
-
-} */
-
 footer {
     background-color: var(--colorsecundario);
     padding: var(--margingrid) 0px;
@@ -125,8 +116,8 @@ footer a:hover {
     display: block;
     color: var(--colorprincipal);
     position: fixed;
-    bottom: 60px;
-    height: 10px;
+    bottom: 5%; /* colocar el boton mas bajo*/
+    right: 10px;
     font-size: 250%;
 }
 
@@ -200,7 +191,7 @@ footer a:hover {
 
 /* margen de seguridad a todas las secciones */
 main section {
-    padding: calc(var(--margingrid)*3) var(--margingrid) calc(var(--margingrid)*5) var(--margingrid);
+    padding: calc(var(--margingrid)*3) var(--margingrid);
 }
 
 /* modificar our service */
@@ -272,6 +263,42 @@ main section p {
  
 /* Fin OurServices */
 
+/* Inicio About Us */
+
+/* maquetar columnas */
+main #aboutus .flex .columns {
+    margin: var(--margingrid) 0;
+}
+main #aboutus .columns h3 {
+    font-weight: 700;
+    font-size: 110%;
+}
+main #aboutus .columns h4 {
+    margin: 0.8em 0;
+    color: var(--colorprincipal);
+}
+main #aboutus .imagen {
+    width: 80%;
+}
+/* efectos de imagen */
+main #aboutus .imagen .marco {
+    border: 3px solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    transition: 1s; /* animación*/
+} 
+main #aboutus .imagen .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s; /* animación*/
+}
+main #aboutus .imagen:hover .marco, main #aboutus .imagen:hover .marco img {
+    transform: rotateZ(0deg);
+}
+main #aboutus {
+    margin-bottom: 2em;
+}
+
+/* Fin About Us */
+
 /* mediaquerys al final */
 
 @media(min-width: 600px){
@@ -288,6 +315,9 @@ main section p {
         border-left: 1px solid #aaa;
         padding: var(--margingrid);
     }
+    main #aboutus .flex {
+        display: flex;
+    }
 }
 
 
@@ -298,6 +328,9 @@ main section p {
     }
     header .nav-top a i {
         font-size: 120%;
+    }
+    footer {
+        text-align: left;
     }
     main #ourservices .grid {
         grid-template-columns: repeat(3, 1fr);
