@@ -100,9 +100,9 @@ header nav .hamburguesa div {
     
     color: var(--colorprincipal);
     font-size: 150%;
-    padding: var(--margingrid) 10px; */
+    padding: var(--margingrid) 10px;
 
-}
+} */
 
 footer {
     background-color: var(--colorsecundario);
@@ -132,6 +132,70 @@ footer a:hover {
 
 /* Fin footer */
 
+/* Inicio Hero */
+
+.hero {
+    background-image: url(../images/fondo.jpg);
+    height: 60vh;
+    background-position: center center;
+    background-size: cover;
+    background-color: #777;
+    background-blend-mode: multiply;
+    color: white;
+    display: flex;
+}
+/* para centrar las letras centradas y a la izq de la foto */
+.hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90%;
+}
+.hero h1 {
+    font-family: var(--fuentesecundaria);
+    font-size: 2.25em;
+}
+.hero h2 {
+    color: var(--colorprincipal);
+    margin: var(--margingrid) 0;
+    font-size: 1.25em;
+}
+.hero p {
+    font-size: 1.15em;
+}
+/* quitar de herencia para poder usarlo en otros elementos */
+
+.boton {
+    display: inline-block; /*para clicar en todos los sitios, pone en linea el bloque */
+    background-color: var(--colorprincipal);
+    padding: var(--margingrid);
+    color: white;
+    text-decoration: none;
+    margin: var(--margingrid) 0; /* el cero le deja a la izq*/
+    border: 1px solid var(--colorprincipal);
+}
+.boton:hover {
+    background: transparent;
+    color: var(--colorprincipal);
+}
+.boton:hover i {
+    transform: translateX(5px); /*animar la flecha*/
+    transition: 0.5s;
+}
+.hero .social {
+    display: flex; /* pone los iconos en linea*/
+    justify-content: space-between; /*usa todo el espacio*/
+    width: 150px; /* acota el espacio*/
+}
+
+.hero .social a {
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+}
+
+/* Fin Hero */
+
 /* mediaquerys al final */
 @media(min-width: 768px) {
     header .nav-top a span {
@@ -158,4 +222,4 @@ footer a:hover {
         padding: 0.5em calc(var(--margingrid));
     }
 }
-}
+
