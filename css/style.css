@@ -196,6 +196,45 @@ footer a:hover {
 
 /* Fin Hero */
 
+/* Inicio OurServices */
+
+/* margen de seguridad a todas las secciones */
+main section {
+    padding: calc(var(--margingrid)*3) var(--margingrid);
+}
+/* modificar our service */
+main section h2 {
+    color: black;
+    font-family: var(--fuentesecundaria);
+    font-size: 2em;
+    text-align: center;
+}
+/* color del Service */
+main section h2 span {
+    color: var(--colorprincipal);
+}
+/* }centrar la linea <hr> y la X */
+main section .underline {
+    position: relative;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: var(--margingrid);
+}
+/* poner la X dentro de la linea */
+main section .underline hr {
+    position: absolute;
+    width: 100%;
+    top: -1px;
+    border-color: var(--colorprincipal); /*solo así porque ya es un border*/
+}
+main section .underline span {
+    color: var(--colorprincipal);
+    font-weight: 700; /*mejor que bold porque ya tenemos esa fuente */
+}
+
+/* Fin OurServices */
+
 /* mediaquerys al final */
 @media(min-width: 768px) {
     header .nav-top a span {
