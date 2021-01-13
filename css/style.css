@@ -200,14 +200,16 @@ footer a:hover {
 
 /* margen de seguridad a todas las secciones */
 main section {
-    padding: calc(var(--margingrid)*3) var(--margingrid);
+    padding: calc(var(--margingrid)*3) var(--margingrid) calc(var(--margingrid)*5) var(--margingrid);
 }
+
 /* modificar our service */
 main section h2 {
     color: black;
     font-family: var(--fuentesecundaria);
     font-size: 2em;
     text-align: center;
+    
 }
 /* color del Service */
 main section h2 span {
@@ -232,10 +234,63 @@ main section .underline span {
     color: var(--colorprincipal);
     font-weight: 700; /*mejor que bold porque ya tenemos esa fuente */
 }
-
+/* ya está en linea no hacemos más  */
+main #ourservices .grid {
+    display: grid;
+}
+main #ourservices .grid article {
+    padding: calc(var(--margingrid)*2) 0;
+    border-bottom: 1px solid #aaa;
+}
+main #ourservices .grid article div i {
+    color: var(--colorprincipal);
+    font-size: 150%;
+    border: 1px solid var(--colorprincipal);
+    padding: 00.5em;
+}
+main #ourservices .grid article h3 {
+    font-weight: 700;
+    margin: 10px 0;
+    font-size: 110%;
+}
+/* para los parrafos no entramos hasta el fondo porque luego tenemos otros parrafos, así se modifican todos */
+/* main #ourservice .grid  */
+main section p {
+    color: #666;
+    line-height: 1.25; /* modifica altura de linea*/
+    margin-bottom: 10px; /*solo una medida*/
+}
+.enlace {
+    text-decoration: none;
+    color: var(--colorprincipal);
+    font-weight: 700;
+}
+/* para girar el camión, lo hacemos en el eje Y */
+.fa-truck {
+    transform: rotateY(180deg);
+}
+ 
 /* Fin OurServices */
 
 /* mediaquerys al final */
+
+@media(min-width: 600px){
+    main #ourservices .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--margingrid); /*separación de columnas*/
+    }
+    /* donde elegir la columna */
+    main #ourservices .grid article:last-child {
+        grid-column: 1/3;
+    }
+    main #ourservices .grid article {
+        border-bottom: 0px;
+        border-left: 1px solid #aaa;
+        padding: var(--margingrid);
+    }
+}
+
+
 @media(min-width: 768px) {
     header .nav-top a span {
         display: inline;
@@ -244,7 +299,14 @@ main section .underline span {
     header .nav-top a i {
         font-size: 120%;
     }
+    main #ourservices .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    main #ourservices .grid article:last-child {
+        grid-column: 3/4;
+    }
 }
+
 @media(min-width: 1004px) {
     header .hamburguesa {
         display: none;
@@ -261,4 +323,6 @@ main section .underline span {
         padding: 0.5em calc(var(--margingrid));
     }
 }
+
+
 
