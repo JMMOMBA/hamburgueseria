@@ -348,8 +348,49 @@ main #ourblog .centrar {
     line-height: 1.25;
 }
 
-
 /* Fin Página Blog */
+
+/* Inico Página Menú */
+
+main #todaysmenu section {
+    padding: calc(var(--margingrid)*3) var(--margingrid);    
+}
+main #todaysmenu h2 {
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+}
+main #todaysmenu .boton {
+    border-radius: 15px;
+}
+main #todaysmenu .letratodays {
+    font-family: var(--fuenteprincipal);
+    font-weight: 700;
+    font-size: 125%;
+    text-align: left;
+}
+main #todaysmenu section .linea {
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: var(--margingrid);
+}
+main #todaysmenu figure {
+    width: 20%;
+    height: auto;
+}
+main #todaysmenu .bloque {
+    display: flex;
+}
+main #todaysmenu .comidas p {
+    color: black;
+    font-weight: 700;
+}
+main #todaysmenu .ofertas p {
+    color: black;
+    display: block;
+} 
+
+/* Fin Página Menú */
 
 /* mediaquerys al final */
 
