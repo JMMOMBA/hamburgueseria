@@ -301,6 +301,56 @@ main #aboutus {
 
 /* Fin About Us */
 
+/* Inicio Página Blog */
+
+main section {
+    padding: 150px;    
+}
+main #ourblog .cuerpo {
+    display: flex;
+}
+main #ourblog .cabezaBlog {
+    font-family: 'Great Vibes', cursive;
+    font-weight: bold;
+}    
+main #ourblog figure {
+    width: 90%;
+    height: auto;
+    position: relative
+}
+main #ourblog .fecha {
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    width: 50px;
+    border-bottom: 50%;
+    opacity: 80%;
+    position: absolute;
+    top: 0px;
+    left: px;
+}
+main #ourblog .tituloBlog {
+    color: black;
+    font-family: var(--fuenteprincipal);
+    font-weight: 700;
+    font-size: 1.35em;
+    text-align: left; 
+}
+main #ourblog .posteo {
+    color: var(--colorprincipal);
+    font-family: var(--fuenteprincipal);
+    font-weight: 700;
+    margin: var(--margingrid);        
+}
+main #ourblog .centrar {
+    margin: var(--margingrid);    
+    line-height: 1.25;
+}
+
+
+/* Fin Página Blog */
+
 /* mediaquerys al final */
 
 @media(min-width: 600px){
@@ -322,6 +372,7 @@ main #aboutus {
     }
 }
 
+/* MEDIAQUERYS */
 
 @media(min-width: 768px) {
     header .nav-top a span {
@@ -339,6 +390,12 @@ main #aboutus {
     }
     main #ourservices .grid article:last-child {
         grid-column: 3/4;
+    }
+    main #ourblog .cuerpo {
+        grid-template-columns:  repeat(2, fr);;
+    }
+    main #ourblog .cuerpo .columnasBlog {
+        grid-column: 2/3;
     }
 }
 
