@@ -337,7 +337,7 @@ main #ourblog .tituloBlog {
     font-size: 1.35em;
     text-align: left; 
 }
-main #ourblog .posteo {
+main #ourblog .posteo {    
     color: var(--colorprincipal);
     font-family: var(--fuenteprincipal);
     font-weight: 700;
@@ -347,6 +347,7 @@ main #ourblog .centrar {
     margin: var(--margingrid);    
     line-height: 1.25;
 }
+
 
 /* Fin Página Blog */
 
@@ -361,22 +362,26 @@ main #todaysmenu h2 {
 }
 main #todaysmenu .boton {
     border-radius: 15px;
+    border-right: 200px solid var(--colorprincipal);
+    margin: var(--margingrid);
 }
 main #todaysmenu .letratodays {
     font-family: var(--fuenteprincipal);
     font-weight: 700;
     font-size: 125%;
-    text-align: left;
+    text-align: left;    
 }
-main #todaysmenu section .linea {
-    width: 100px;
+main #todaysmenu section .linea .naranja {
+    float: left;
+    width: 5px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: var(--margingrid);
+    margin-right: 80%;
 }
 main #todaysmenu figure {
     width: 20%;
     height: auto;
+    float: left;
 }
 main #todaysmenu .bloque {
     display: flex;
@@ -384,11 +389,25 @@ main #todaysmenu .bloque {
 main #todaysmenu .comidas p {
     color: black;
     font-weight: 700;
+    margin: 2em;    
 }
 main #todaysmenu .ofertas p {
     color: black;
     display: block;
-} 
+}
+main #todaysmenu .ofertas {
+    padding: calc(var(--margingrid)*5) 0;
+    margin-right: 30%;       
+}
+main #todaysmenu .primerbloque {
+    width: 35%
+}
+main #todaysmenu .segundobloque aside {
+    display: flex;    
+    margin-right: 15px;
+    paddi
+}
+
 
 /* Fin Página Menú */
 
