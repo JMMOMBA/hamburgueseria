@@ -306,8 +306,13 @@ main #aboutus {
 main section {
     padding: 150px;    
 }
-main #ourblog .cuerpo {
-    display: flex;
+main #ourblog .centrar {
+    display: grid;
+    width: 40%;
+    grid-template-columns: (3fr);
+    float: left;
+    margin: var(--margingrid);    
+    line-height: 1.25;   
 }
 main #ourblog .cabezaBlog {
     font-family: 'Great Vibes', cursive;
@@ -343,35 +348,36 @@ main #ourblog .posteo {
     font-weight: 700;
     margin: var(--margingrid);        
 }
-main #ourblog .centrar {
-    margin: var(--margingrid);    
-    line-height: 1.25;
-}
+
 
 
 /* Fin Página Blog */
 
 /* Inico Página Menú */
 
-main #todaysmenu section {
-    padding: calc(var(--margingrid)*3) var(--margingrid);    
+main #todaysmenu {
+    padding: calc(var(--margingrid)*3) var(--margingrid);
+    background: var(--colorsecundario);
+    color: white;        
 }
 main #todaysmenu h2 {
     font-family: 'Great Vibes', cursive;
     font-weight: bold;
+    color: white;
 }
 main #todaysmenu .boton {
+    display: inline-block;
     border-radius: 15px;
     border-right: 200px solid var(--colorprincipal);
-    margin: var(--margingrid);
+    margin: var(--margingrid) 0;
 }
 main #todaysmenu .letratodays {
     font-family: var(--fuenteprincipal);
     font-weight: 700;
     font-size: 125%;
-    text-align: left;    
+    text-align: left;   
 }
-main #todaysmenu section .linea .naranja {
+main #todaysmenu .linea .naranja {
     float: left;
     width: 5px;
     margin: 0 auto;
@@ -387,25 +393,27 @@ main #todaysmenu .bloque {
     display: flex;
 }
 main #todaysmenu .comidas p {
-    color: black;
+    color: white;
     font-weight: 700;
     margin: 2em;    
 }
 main #todaysmenu .ofertas p {
-    color: black;
+    color: white;
     display: block;
 }
 main #todaysmenu .ofertas {
     padding: calc(var(--margingrid)*5) 0;
-    margin-right: 30%;       
+    margin-right: 30%;
+           
 }
 main #todaysmenu .primerbloque {
     width: 35%
 }
 main #todaysmenu .segundobloque aside {
-    display: flex;    
-    margin-right: 15px;
-    paddi
+    display: flex;
+    color: white;    
+    width: var(--margingrid);
+    height: 175px;
 }
 
 
@@ -432,8 +440,6 @@ main #todaysmenu .segundobloque aside {
     }
 }
 
-/* MEDIAQUERYS */
-
 @media(min-width: 768px) {
     header .nav-top a span {
         display: inline;
@@ -451,12 +457,10 @@ main #todaysmenu .segundobloque aside {
     main #ourservices .grid article:last-child {
         grid-column: 3/4;
     }
-    main #ourblog .cuerpo {
-        grid-template-columns:  repeat(2, fr);;
+    main #ourblog .columnasBlog {
+        grid-template-columns: 2 1fr;
     }
-    main #ourblog .cuerpo .columnasBlog {
-        grid-column: 2/3;
-    }
+    
 }
 
 @media(min-width: 1004px) {
@@ -474,6 +478,10 @@ main #todaysmenu .segundobloque aside {
         border: 0px;
         padding: 0.5em calc(var(--margingrid));
     }
+    main #ourblog .columnasBlog {
+        width: 60%;
+    }
+    
 }
 
 
